@@ -1,0 +1,19 @@
+# KiCad automatic local-history snapshots (editor backups, not project source)
+.history/
+
+# KiCad local project settings (machine-specific, not project source)
+*.kicad_prl
+
+# Local KiCad library tables (absolute machine paths, not portable)
+fp-lib-table
+sym-lib-table
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Local Claude Code session settings (machine-specific, not project source)
+.claude/
+
+# Transient KiCad annotation/ERC/DRC log output
+report.txt
