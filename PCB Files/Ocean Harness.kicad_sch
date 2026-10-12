@@ -1206,6 +1206,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Diode:SS34"
 			(pin_numbers
 				(hide yes)
@@ -37059,7 +37199,7 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 164.084) (xy 299.72 164.084)
+			(xy 313.69 164.084) (xy 299.72 164.084)
 		)
 		(stroke
 			(width 0)
@@ -37524,7 +37664,7 @@
 	)
 	(wire
 		(pts
-			(xy 325.12 164.084) (xy 327.66 164.084)
+			(xy 321.31 164.084) (xy 327.66 164.084)
 		)
 		(stroke
 			(width 0)
@@ -37702,16 +37842,6 @@
 			(type default)
 		)
 		(uuid "ec529d80-f849-4cd0-a45e-9d5c0df97c6a")
-	)
-	(wire
-		(pts
-			(xy 317.5 171.704) (xy 317.5 174.244)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f30050c6-7913-42ec-bb5c-6b89c859a85f")
 	)
 	(wire
 		(pts
@@ -38417,16 +38547,6 @@
 			(justify left bottom)
 		)
 		(uuid "f2e9457b-8fd7-4460-b0ab-be0426c99816")
-	)
-	(label "GND"
-		(at 317.5 174.244 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f527872b-e5ca-465a-b94f-d553bb602f39")
 	)
 	(label "SBU 1"
 		(at 97.79 30.48 180)
@@ -39850,7 +39970,7 @@
 				)
 			)
 		)
-		(property "Value" "16V"
+		(property "Value" "SMAJ16A"
 			(at 193.799 168.656 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41488,9 +41608,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "power:VCC")
 		(at 139.7 90.17 0)
-		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -41543,7 +41662,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
 			(at 139.7 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -41738,9 +41857,19 @@
 			)
 		)
 	)
+	(wire
+		(pts
+			(xy 327.66 164.084) (xy 327.66 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "791a29ac-c189-437e-9ba2-94c14def2725")
+	)
 	(symbol
-		(lib_id "Regulator_Linear:L78L12_SOT89")
-		(at 317.5 164.084 0)
+		(lib_id "power:PWR_FLAG")
+		(at 327.66 158.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -41748,9 +41877,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d1c147d8-836e-4fa2-b4b6-5d4d5726eee3")
-		(property "Reference" "U3"
-			(at 317.5 159.004 0)
+		(uuid "eab0c764-b244-4d8d-a436-8f97545afb8f")
+		(property "Reference" "#FLG03"
+			(at 327.66 156.845 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41759,8 +41889,8 @@
 				)
 			)
 		)
-		(property "Value" "L78L12_SOT89"
-			(at 308.102 172.212 0)
+		(property "Value" "PWR_FLAG"
+			(at 327.406 154.432 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41769,8 +41899,84 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
-			(at 317.5 164.084 0)
+		(property "Footprint" ""
+			(at 327.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 327.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 327.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "617d242d-e65f-4c22-b4a7-4ae53ecb132e")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 317.5 164.084 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0b1fcf5f-2a7a-42cd-83f8-b683d6bddb1b")
+		(property "Reference" "R5"
+			(at 317.5 160.274 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "160"
+			(at 317.5 167.894 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 317.5 164.084 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41782,6 +41988,7 @@
 		)
 		(property "Datasheet" ""
 			(at 317.5 164.084 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41790,8 +41997,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Relay coil / switch supply dropper, replaces U3 L78L12"
 			(at 317.5 164.084 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41801,18 +42009,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "eaa0517d-2919-45d1-bb84-2ccaee1751cd")
+			(uuid "9e970693-0a56-4c64-8adc-ac0c0cbbfb97")
 		)
 		(pin "2"
-			(uuid "52973c96-b90a-4073-b4c9-d673574c5cd2")
-		)
-		(pin "3"
-			(uuid "be3dd6eb-8927-47db-9e9a-837dae56d7df")
+			(uuid "489f79da-0981-46e0-a42c-48508dfad650")
 		)
 		(instances
 			(project "Ocean Harness"
 				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
-					(reference "U3")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -42163,7 +42368,7 @@
 				)
 			)
 		)
-		(property "Value" "G5V-2 DC12"
+		(property "Value" "G5V-2-H1 DC12"
 			(at 109.982 104.648 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42185,7 +42390,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "G5V-2 DC12"
+		(property "Datasheet" "G5V-2-H1 DC12"
 			(at 90.17 90.17 0)
 			(hide yes)
 			(show_name no)
