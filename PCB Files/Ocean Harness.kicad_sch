@@ -37380,6 +37380,16 @@
 	)
 	(wire
 		(pts
+			(xy 327.66 164.084) (xy 327.66 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "791a29ac-c189-437e-9ba2-94c14def2725")
+	)
+	(wire
+		(pts
 			(xy 157.48 30.48) (xy 137.16 30.48)
 		)
 		(stroke
@@ -38661,6 +38671,85 @@
 			(project "Ocean Harness"
 				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 317.5 164.084 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0b1fcf5f-2a7a-42cd-83f8-b683d6bddb1b")
+		(property "Reference" "R5"
+			(at 317.5 160.274 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "160"
+			(at 317.5 167.894 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 317.5 164.084 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 317.5 164.084 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Relay coil / switch supply dropper, replaces U3 L78L12"
+			(at 317.5 164.084 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e970693-0a56-4c64-8adc-ac0c0cbbfb97")
+		)
+		(pin "2"
+			(uuid "489f79da-0981-46e0-a42c-48508dfad650")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -41857,172 +41946,6 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 327.66 164.084) (xy 327.66 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "791a29ac-c189-437e-9ba2-94c14def2725")
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 327.66 158.75 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eab0c764-b244-4d8d-a436-8f97545afb8f")
-		(property "Reference" "#FLG03"
-			(at 327.66 156.845 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 327.406 154.432 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 327.66 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 327.66 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 327.66 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "617d242d-e65f-4c22-b4a7-4ae53ecb132e")
-		)
-		(instances
-			(project "Ocean Harness"
-				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 317.5 164.084 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0b1fcf5f-2a7a-42cd-83f8-b683d6bddb1b")
-		(property "Reference" "R5"
-			(at 317.5 160.274 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "160"
-			(at 317.5 167.894 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 317.5 164.084 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 317.5 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Relay coil / switch supply dropper, replaces U3 L78L12"
-			(at 317.5 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9e970693-0a56-4c64-8adc-ac0c0cbbfb97")
-		)
-		(pin "2"
-			(uuid "489f79da-0981-46e0-a42c-48508dfad650")
-		)
-		(instances
-			(project "Ocean Harness"
-				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "My_Components:PESD1CAN")
 		(at 295.91 110.49 270)
@@ -42342,6 +42265,83 @@
 			(project "Ocean Harness"
 				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 327.66 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eab0c764-b244-4d8d-a436-8f97545afb8f")
+		(property "Reference" "#FLG03"
+			(at 327.66 156.845 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 327.406 154.432 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 327.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 327.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 327.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "617d242d-e65f-4c22-b4a7-4ae53ecb132e")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -42677,8 +42677,7 @@
 	(group ""
 		(uuid "47b84f24-b378-425c-bc6f-aa15dceb4fcd")
 		(members "401f0b39-8191-4d7f-b094-b9f0cca4e930" "7f341bd7-1401-4c41-970a-6d47faf76df1"
-			"baa6b9ac-2eb4-4589-ad40-3b6a9a2fa630" "d1c147d8-836e-4fa2-b4b6-5d4d5726eee3"
-			"f30050c6-7913-42ec-bb5c-6b89c859a85f" "f527872b-e5ca-465a-b94f-d553bb602f39"
+			"baa6b9ac-2eb4-4589-ad40-3b6a9a2fa630"
 		)
 	)
 	(group ""
