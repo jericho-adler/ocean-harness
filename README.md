@@ -16,7 +16,6 @@ An automotive ADAS harness interposer designed in KiCad, built for the **Fisker 
 
 [`PCB Files/design_review_2026-10-13.md`](PCB%20Files/design_review_2026-10-13.md) — **current.** Full analyser-backed review of functional correctness and production readiness, cross-checked against the Fisker CON1 pinout and against a confirmed-working reference design. Verdict: the board functions, and the five pre-fab blockers it identified have been fixed. Read it before fabricating — it still lists the items to confirm before installing in a vehicle, chiefly verifying the Molex connector pin numbering and polarization against the Fisker CON1 keying.
 
-[`PCB Files/design_review_2026-10-12.md`](PCB%20Files/design_review_2026-10-12.md) — superseded; kept for history. Note that two of its claims do not match the committed board: the VBAT pass-through measures 61 mΩ rather than 24.6 mΩ, and its "DRC 0 unconnected" result held only after a zone refill.
 
 ## License
 
