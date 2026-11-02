@@ -17,3 +17,9 @@ __pycache__/
 
 # Transient KiCad annotation/ERC/DRC log output
 report.txt
+
+# KiCad automatic board/schematic backups
+PCB Files/Backup/
+
+# Local working images from tool sessions
+Claude outputs/
