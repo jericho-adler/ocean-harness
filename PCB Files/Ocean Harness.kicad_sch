@@ -37319,6 +37319,158 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 97.79 41.91)
@@ -37958,16 +38110,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 85.09) (xy 50.8 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8383edc7-2e37-4c38-a221-d000cb676b01")
-	)
-	(wire
-		(pts
 			(xy 137.16 57.15) (xy 153.67 57.15)
 		)
 		(stroke
@@ -38016,16 +38158,6 @@
 			(type default)
 		)
 		(uuid "8dfeb07d-9def-4157-9d47-e56e47c88881")
-	)
-	(wire
-		(pts
-			(xy 41.91 87.63) (xy 50.8 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e8ecd72-9e15-4bb3-ae3d-9ccfca9beb7a")
 	)
 	(wire
 		(pts
@@ -38231,7 +38363,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 110.49) (xy 186.69 110.49)
+			(xy 172.72 110.49) (xy 186.69 110.49)
 		)
 		(stroke
 			(width 0)
@@ -38560,16 +38692,6 @@
 		)
 		(uuid "7398eeff-a841-450c-b263-050cb23c55b4")
 	)
-	(label "GND"
-		(at 217.17 67.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "74ffaa84-fade-4ec1-9f2c-4244ca1ea5fa")
-	)
 	(label "ADAS_CAN_L_MOD"
 		(at 153.67 33.02 180)
 		(effects
@@ -38601,16 +38723,6 @@
 			(justify left bottom)
 		)
 		(uuid "7a846dc6-b14f-49be-96fc-653dc5ac4f30")
-	)
-	(label "VIN"
-		(at 327.66 164.084 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7f341bd7-1401-4c41-970a-6d47faf76df1")
 	)
 	(label "ADAS_CAN_L_MOD"
 		(at 224.79 80.01 0)
@@ -38664,16 +38776,6 @@
 		)
 		(uuid "8cac6c16-4160-4b41-96c8-9a8ec17e9a49")
 	)
-	(label "GND"
-		(at 262.89 163.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8db038e8-c988-4aec-b0e3-4550af32b70a")
-	)
 	(label "ADAS_CAN_H_MOD"
 		(at 153.67 59.69 0)
 		(effects
@@ -38693,16 +38795,6 @@
 			(justify left bottom)
 		)
 		(uuid "95a444f7-bc02-4604-bf79-0d9ec1647cdf")
-	)
-	(label "VIN"
-		(at 344.7385 160.0137 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "96e47273-5c7a-40b1-80b3-724531878610")
 	)
 	(label "MRR_CAN_H"
 		(at 50.8 54.61 0)
@@ -38745,7 +38837,7 @@
 		)
 		(uuid "a08c9c08-2418-4a19-b8b3-dac361000aa1")
 	)
-	(label "COMMA_P"
+	(label "ADAS_CAN_H_C"
 		(at 195.58 110.49 0)
 		(effects
 			(font
@@ -38765,8 +38857,8 @@
 		)
 		(uuid "a4c01ff8-4e93-4120-9aa3-a3eebd24591a")
 	)
-	(label "COMMA_N"
-		(at 177.8 110.49 0)
+	(label "ADAS_CAN_L_C"
+		(at 172.72 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -38796,16 +38888,6 @@
 			(justify left bottom)
 		)
 		(uuid "b4c00206-e6e9-4395-ac91-ba5ae827f747")
-	)
-	(label "GND"
-		(at 280.67 169.9841 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b777e528-cb00-4750-98c8-1605cf3dc4df")
 	)
 	(label "ADAS_CAN_L_MOD"
 		(at 209.55 110.49 0)
@@ -38975,7 +39057,7 @@
 		)
 		(uuid "e7009cd5-0d66-48fb-b485-001c24e11f45")
 	)
-	(label "Harness_12v"
+	(label "VBAT_FUSED"
 		(at 223.7607 164.084 0)
 		(effects
 			(font
@@ -38995,16 +39077,6 @@
 		)
 		(uuid "e8d55964-56f3-497f-b0b9-98e591238a31")
 	)
-	(label "GND"
-		(at 344.7385 170.1737 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e94d81af-b3c8-4daf-92a2-66e680db1bfe")
-	)
 	(label "ADAS_CAN_H_MOD"
 		(at 224.79 82.55 0)
 		(effects
@@ -39014,16 +39086,6 @@
 			(justify left bottom)
 		)
 		(uuid "e9900b41-d167-4dc1-9be7-fd3921dc8488")
-	)
-	(label "COMMA_N"
-		(at 50.8 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ef758c32-25c0-48db-b70b-cae47706cd4d")
 	)
 	(label "12V_PROT"
 		(at 241.3 163.83 0)
@@ -39064,16 +39126,6 @@
 			(justify left bottom)
 		)
 		(uuid "f9febb66-ec72-4a88-b398-9a25d84e6b14")
-	)
-	(label "COMMA_P"
-		(at 50.8 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fc6f1ddf-1879-42de-991d-45cdc003935c")
 	)
 	(label "CMRR_FR_CAN_H"
 		(at 307.34 40.64 0)
@@ -41025,7 +41077,7 @@
 				)
 			)
 		)
-		(property "Value" "SS34"
+		(property "Value" "MBRA340T3G"
 			(at 217.4107 169.164 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41046,7 +41098,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/mbra340t3-d.pdf"
 			(at 217.4107 164.084 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41066,7 +41118,7 @@
 				)
 			)
 		)
-		(property "MPN" "SS34"
+		(property "MPN" "MBRA340T3G"
 			(at 217.4107 164.084 0)
 			(hide yes)
 			(show_name no)
@@ -41077,7 +41129,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C8678"
+		(property "JLCPCB Part #" "C26178"
 			(at 217.4107 164.084 0)
 			(hide yes)
 			(show_name no)
@@ -41099,7 +41151,7 @@
 				)
 			)
 		)
-		(property "Spec" "Schottky rectifier 40V 3A. MUST be DO-214AC (SMA) -- Vishay's SS34 is SMC and will not fit this footprint"
+		(property "Spec" "Schottky rectifier 40V 3A, VF 450mV max @3A/25C, 390mV max @3A/100C. MUST be DO-214AC (SMA)."
 			(at 217.4107 164.084 0)
 			(hide yes)
 			(show_name no)
@@ -44904,6 +44956,739 @@
 			(justify left bottom)
 		)
 		(uuid "ddd7f110-e2cb-4aea-9c52-d02b2fb81c3d")
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 218.44 177.8 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5f1e0a3c-2b7d-4c1e-9a4f-0c3d5e6f7a81")
+		(property "Reference" "F1"
+			(at 218.44 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3A"
+			(at 218.44 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
+			(at 218.44 177.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-c1t-series.pdf"
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuses the board's tap off the ECU's VBAT feed, so a short on the board side (failed TVS, cracked C1, damaged cable) opens this instead of the car's fuse for the ADAS ECU."
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0685T3000-01"
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C5456894"
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bel Fuse"
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Spec" "Fuse, 3A time-lag, 63VDC, ceramic, 1206 (Bel C1T)"
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFG Part #" "0685T3000-01"
+			(at 218.44 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c716dbf0-e036-4155-b2e5-078ae654c3d2")
+		)
+		(pin "2"
+			(uuid "f15fc94b-c09c-43cf-8d92-d61c281a14ab")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 209.55 177.8) (xy 214.63 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bf5caab-fa84-4bdf-9cba-6a1ec853db2b")
+	)
+	(label "Harness_12v"
+		(at 209.55 177.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8e8e0998-7982-4174-87e5-8bc8a86c009e")
+	)
+	(wire
+		(pts
+			(xy 222.25 177.8) (xy 227.33 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bca3a075-b3a4-4b5d-b6ac-0f7586abb797")
+	)
+	(label "VBAT_FUSED"
+		(at 227.33 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dc0eb7c9-e10f-46db-9b44-f8325a531062")
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 86.36 53.34 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6a2b1c4d-3e8f-4d2a-8b5c-1d4e6f7a8b92")
+		(property "Reference" "D14"
+			(at 88.9 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PESD24VS1UB"
+			(at 88.9 54.61000000000001 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-523"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PESDXS1UB_SER.pdf"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ESD protection on SBU 1 (J1 A8), the DG419 control line. 24V unidirectional, cathode to SBU 1."
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PESD24VS1UB,115"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C85382"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Spec" "ESD diode, 24V unidirectional, SOD-523. Cathode = pin 1"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFG Part #" "PESD24VS1UB,115"
+			(at 86.36 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "20e0c987-4336-4e0c-87b0-107b1db28461")
+		)
+		(pin "2"
+			(uuid "5608c41c-8884-4db7-9707-a15868912b8b")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 86.36 49.53) (xy 86.36 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d3047be-77fa-475f-b7a4-0656b170219e")
+	)
+	(label "SBU 1"
+		(at 86.36 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8e4a01fa-df46-456f-9775-9a5e42544703")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 57.150000000000006 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "baf44f7c-3ec0-4877-9ab3-e8d23453307b")
+		(property "Reference" "#PWR043"
+			(at 86.36 63.50000000000001 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.36 60.96000000000001 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 57.150000000000006 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 57.150000000000006 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 86.36 57.150000000000006 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c8e5c381-d008-418e-8c05-e24da5fa774f")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(no_connect
+		(at 41.91 85.09)
+		(uuid "edfc4b8d-e1bd-45c9-a102-16afc5033c69")
+	)
+	(no_connect
+		(at 41.91 87.63)
+		(uuid "c804ed9c-6532-4ef2-b291-6922d4f8b509")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 217.17 67.31 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb2ce694-95bf-4d9c-b980-cad7fd90fc95")
+		(property "Reference" "#PWR044"
+			(at 217.17 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "GND"
+			(at 217.17 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 217.17 67.31 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 217.17 67.31 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 217.17 67.31 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "6d5be6d9-b0ec-48d6-af23-55a53698842f")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 262.89 163.83 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3e02aff-404d-4020-a65e-cba6cd43d94d")
+		(property "Reference" "#PWR045"
+			(at 262.89 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "GND"
+			(at 262.89 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 262.89 163.83 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 262.89 163.83 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 262.89 163.83 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "d4789117-3964-496f-b167-f68c1009623b")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 280.67 169.9841 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c47ace0b-feef-48bf-91d3-7c54fec1ed38")
+		(property "Reference" "#PWR046"
+			(at 280.67 163.6341 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "GND"
+			(at 280.67 164.9041 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 280.67 169.9841 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 280.67 169.9841 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 280.67 169.9841 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "73510cae-9abd-485e-ac2f-89a46a82f749")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 344.7385 170.1737 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "74720846-72c5-4537-93b3-cab70f8e67d0")
+		(property "Reference" "#PWR047"
+			(at 344.7385 163.8237 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "GND"
+			(at 344.7385 165.0937 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 344.7385 170.1737 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 344.7385 170.1737 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 344.7385 170.1737 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "3cb8b630-c246-482e-bd1b-9f140ca16360")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 327.66 164.084 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3006ffe7-aa27-43d9-861c-f621ea0cbd7e")
+		(property "Reference" "#PWR048"
+			(at 327.66 157.734 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "VIN"
+			(at 327.66 159.004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 327.66 164.084 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 327.66 164.084 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"VIN\""
+			(at 327.66 164.084 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "d6f7ebf3-200c-4d90-bb2e-bbd574a91daf")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 344.7385 160.0137 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6027e632-f2fd-4f2a-a789-3ede8340e19e")
+		(property "Reference" "#PWR049"
+			(at 344.7385 153.6637 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "VIN"
+			(at 344.7385 154.9337 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 344.7385 160.0137 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 344.7385 160.0137 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"VIN\""
+			(at 344.7385 160.0137 0)
+			(hide yes) (show_name no) (do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "f360a8b6-13fe-4fd5-b45a-619a2dd77cf2")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(junction
+		(at 217.17 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9f5c0b8-b43a-4a86-a983-f067f0b578f0")
 	)
 	(sheet_instances
 		(path "/"
