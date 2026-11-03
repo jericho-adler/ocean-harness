@@ -338,9 +338,8 @@ tidy.
 
 ## Not performed / review limits
 
-- **SPICE simulation not performed** — no simulator installed (`ngspice`, `ltspice`, `xyce` all absent). The
-  circuit has no filters, dividers or op-amp stages whose values would benefit much; R2/R3 is the only divider
-  and it is a plain 240 Ω pulldown.
+- **SPICE simulation: performed** (ngspice-42, added after the first pass of this review). 6 subcircuits
+  simulated, **6 pass, 0 warn, 0 fail, 0 skip**, 0.06 s total. See "Simulation verification" below.
 - **Gerber analysis not performed** — no fabrication outputs in the tree. The `production/` directory that
   existed in October is gone.
 - **Lifecycle / obsolescence audit not performed** — no distributor API credentials in the environment
@@ -360,11 +359,40 @@ tidy.
 
 ---
 
+## Simulation verification
+
+Run with ngspice-42 against the committed schematic. 6 subcircuits, **6 pass / 0 warn / 0 fail / 0 skip**.
+
+| Subcircuit | Result |
+|---|---|
+| Voltage divider R2/R3 | Vout 1.65 V from 3.3 V, ratio 0.500, **0.00 % error** |
+| Decoupling C1 (12V_PROT) | Z_min 174 mΩ; 509 mΩ @ 1 MHz; 4.83 Ω @ 100 kHz |
+| Decoupling C2 (VIN) | Z_min 316 mΩ; 1.62 Ω @ 1 MHz; 15.9 Ω @ 100 kHz |
+| Protection D9, D11 (12 V rail), D14 (3.3 V rail) | Present and correctly placed; clamping not measurable without manufacturer models |
+
+Two caveats on reading these:
+
+- **R2/R3 is not actually a divider.** The analyzer detects the topology and the simulation confirms the
+  arithmetic, but the midpoint (`Net-(R2-Pad2)`) goes nowhere — the two 120 Ω parts are in series as a plain
+  240 Ω pulldown on `SBU 1`. The 1.65 V figure is correct and irrelevant.
+- **The protection "pass" results mean presence, not performance.** They use a generic diode model, so they
+  say nothing about whether the SMAJ16A actually clamps where the design needs it to. The load-dump analysis
+  earlier in this review remains inference-only.
+
+The PDN numbers are the one genuinely new piece of information: 509 mΩ at 1 MHz on `12V_PROT` and 1.62 Ω on
+`VIN` are high in absolute terms, but this board switches nothing faster than a relay and a CAN transceiver's
+worth of edge rate, so there is no load that would care. C3 on `SW_VCC` was not picked up as a decoupling
+group.
+
+Nothing here changes the verdict or the blockers. The board simply has very little analog content to verify —
+no regulators, filters, feedback networks or op-amp stages — so SPICE closes the gap in the review without
+adding findings.
+
 ## Analyzers run
 
 `analyze_schematic.py`, `analyze_pcb.py --full --proximity`, `cross_analysis.py`, `analyze_emc.py`,
-`analyze_thermal.py`, `summarize_findings.py`, plus `kicad-cli pcb drc --schematic-parity` and
-`kicad-cli sch erc`. 114 analyzer findings across 33 rule groups; EMC risk score 53.5.
+`analyze_thermal.py`, `simulate_subcircuits.py` (ngspice-42), `summarize_findings.py`, plus
+`kicad-cli pcb drc --schematic-parity` and `kicad-cli sch erc`. 114 analyzer findings across 33 rule groups; EMC risk score 53.5.
 
 ## Before fabricating
 
