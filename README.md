@@ -4,6 +4,8 @@ An ADAS CAN interposer for the **Fisker Ocean**, designed in KiCad. It plugs in 
 
 ![Top view of the rev 2 board: vehicle harness headers on the right, ADAS ECU headers on the left, USB-C for the comma device at the bottom](images/ocean-harness-top.png)
 
+![Isometric render of the rev 1 board, showing the stacked vehicle-harness and ADAS-ECU connectors around the relay and USB-C connector](images/ocean-harness-iso.png)
+
 | | |
 | --- | --- |
 | Board | 89.0 × 72.2 mm, 4 layers, every part on the top side |
@@ -139,8 +141,8 @@ The two header pairs face out of opposite edges, so the J5↔J6 pin order is rev
 | Path | Contents |
 | --- | --- |
 | `PCB Files/` | KiCad 10 project (`.kicad_pro`, `.kicad_sch`, `.kicad_pcb`) and design reviews |
-| `images/` | Board top view |
-| `3D models/` | STEP model and render. These still show the rev 1 layout |
+| `images/` | Board top view and iso render |
+| `3D models/` | STEP model. Still shows the rev 1 layout |
 
 ## Revision history
 
