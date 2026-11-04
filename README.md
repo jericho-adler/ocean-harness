@@ -2,7 +2,7 @@
 
 An ADAS CAN interposer for the **Fisker Ocean**, designed in KiCad. It plugs in between the car's harness and the ADAS ECU's main connector (CON1), so a comma device can sit between the car and the ECU. When the board has no power it drops back to a plain hard-wired passthrough, and the car behaves exactly as stock.
 
-![Isometric render of the rev 1 board, showing the stacked vehicle-harness and ADAS-ECU connectors around the relay and USB-C connector](images/ocean-harness-iso.png)
+![Isometric render of the board, showing the stacked vehicle-harness and ADAS-ECU connectors around the relay and USB-C connector](images/ocean-harness-iso.png)
 
 | | |
 | --- | --- |
