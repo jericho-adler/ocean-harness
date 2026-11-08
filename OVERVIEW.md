@@ -26,7 +26,7 @@ Self-powered from harness VBAT on J3 pin 1 — no external supply.
 
 - **F1** (Bel 0685T3000-01, 3 A time-lag) fuses the board's own tap, leaving the ECU passthrough
   unfused.
-- **Q1** (Diodes DMP4015SSSQ-13, AEC-Q101 P-channel MOSFET) gives series reverse-polarity
+- **Q1** (Diodes DMP4015SSS-13 P-channel MOSFET) gives series reverse-polarity
   protection into the `12V_PROT` rail. Drain on the input, source on the output, so the body diode
   conducts battery-to-load and the channel shorts it out; under reversed polarity both block.
   **R7** (100 kΩ) is the gate pulldown and **D15** (BZT52C16) clamps V<sub>GS</sub> to 16 V against
@@ -133,6 +133,6 @@ that are not registered on this machine.
   copper-to-edge clearance around it on the outer layers; the rest of the board keeps 0.5 mm.
 - **No ignition line.** SBU2 (J1 B8) is unconnected, so the comma device takes ignition from CAN.
 - Several datasheets embedded in the board file do not correspond to fitted parts: `DMN3200U-7`
-  (the fitted FET is Q1, a DMP4015SSSQ-13), `JAE MX34032NF4`, `Molex 2125280000`, and `SMAJ36` —
+  (the fitted FET is Q1, a DMP4015SSS-13), `JAE MX34032NF4`, `Molex 2125280000`, and `SMAJ36` —
   note the fitted TVS is the **SMAJ16A**, a 16 V standoff part, not the 36 V SMAJ36. Worth
   clearing out; they also add about 3 MB to the file.

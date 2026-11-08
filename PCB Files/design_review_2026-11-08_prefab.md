@@ -284,7 +284,8 @@ LCSC check, temperature ratings, and the J1 library caution.
 
 | Ref | MPN | LCSC | LCSC stock on 8 Nov |
 |---|---|---|---|
-| Q1 | DMP4015SSSQ-13 | C531172 | 0; 20k at partner suppliers, 3–7 days. The non-automotive DMP4015SSS-13 (C508210) had 2,539 |
+| Q1 | DMP4015SSS-13 | C508210 | 2,539. Replaces the AEC-Q101 DMP4015SSSQ-13 (C531172), which had 0; same pinout, ratings and footprint |
+| C2, C3 | CL10B104KB8NNNC (Samsung) | C1591 | JLCPCB Basic part; replaces C14663, which JLCPCB showed as unavailable |
 | R6 | ESR03EZPF3301 | C510091 | 4,060 |
 | R7 | ESR03EZPJ104 | C253331 | 9,850 |
 | D15 | BZT52C16-7-F | C397929 | 3,560 |

@@ -41068,7 +41068,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0603KRX7R9BB104"
+		(property "MPN" "CL10B104KB8NNNC"
 			(at 344.7385 165.0937 0)
 			(hide yes)
 			(show_name no)
@@ -41079,7 +41079,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C14663"
+		(property "JLCPCB Part #" "C1591"
 			(at 344.7385 165.0937 0)
 			(hide yes)
 			(show_name no)
@@ -41090,7 +41090,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 344.7385 165.0937 0)
 			(hide yes)
 			(show_name no)
@@ -44696,7 +44696,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0603KRX7R9BB104"
+		(property "MPN" "CL10B104KB8NNNC"
 			(at 327.66 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -44707,7 +44707,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C14663"
+		(property "JLCPCB Part #" "C1591"
 			(at 327.66 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -44718,7 +44718,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 327.66 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -46038,7 +46038,7 @@
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Value" "DMP4015SSSQ-13"
+		(property "Value" "DMP4015SSS-13"
 			(at 218.6807 171.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46051,21 +46051,21 @@
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP4015SSSQ.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP4015SSS.pdf"
 			(at 218.6807 166.624 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Description" "P-channel reverse-polarity pass FET, AEC-Q101. Drain (pads 5-8) on VBAT_FUSED, source (pads 1-3) on 12V_PROT, so the body diode conducts battery-to-load and the channel then shorts it out. Replaces the D10 Schottky: 11 mOhm max at Vgs -10V is 0.10W at the 3A fuse limit against 1.17W for the diode, and recovers about 0.4V of headroom to the comma device."
+		(property "Description" "P-channel reverse-polarity pass FET. Drain (pads 5-8) on VBAT_FUSED, source (pads 1-3) on 12V_PROT, so the body diode conducts battery-to-load and the channel then shorts it out. Replaces the D10 Schottky: 11 mOhm max at Vgs -10V is 0.10W at the 3A fuse limit against 1.17W for the diode, and recovers about 0.4V of headroom to the comma device."
 			(at 218.6807 166.624 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "MPN" "DMP4015SSSQ-13"
+		(property "MPN" "DMP4015SSS-13"
 			(at 218.6807 166.624 0)
 			(hide yes)
 			(show_name no)
@@ -46079,14 +46079,14 @@
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Spec" "P-channel MOSFET, -40V, -10.1A, RDS(on) 11 mOhm max @ Vgs=-10V, Vgss +-25V, SO-8, AEC-Q101"
+		(property "Spec" "P-channel MOSFET, -40V, -10.1A, RDS(on) 11 mOhm max @ Vgs=-10V, Vgss +-25V, SO-8"
 			(at 218.6807 166.624 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "JLCPCB Part #" "C531172"
+		(property "JLCPCB Part #" "C508210"
 			(at 218.6807 166.624 0)
 			(hide yes)
 			(show_name no)
