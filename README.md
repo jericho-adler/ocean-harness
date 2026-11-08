@@ -146,26 +146,6 @@ The two header pairs face out of opposite edges, so the J5↔J6 pin order is rev
 | `images/` | Iso render |
 | `3D models/` | STEP model. Still shows the rev 1 layout |
 
-## Revision history
-
-| Rev | Date | Changes |
-| --- | --- | --- |
-| 2 | November 2026 | Added the DG419 supply clamp (D12, R6, D13, C3); U1/U2 V+ and VL now come from it. Added F1 on the VBAT tap, moved D1 to the `_C` pair, added D14 on `SBU 1`, widened the ECU VBAT passthrough, and put a "12V, COMMA ONLY" note on the back silkscreen under J1. Board shrunk from 115.75 × 75.25 mm to 89.0 × 72.2 mm with every part on top. M3 holes moved into the header gaps. Re-routed, silkscreen redone. Late in the revision, **D10 (SS34, later MBRA340T3G) was replaced by Q1 + R7 + D15** — a P-channel ideal-diode pass FET — which cut the reverse-polarity element's dissipation from 1.5 W to 0.1 W at the fuse limit. The group moved into the J5↔J3 gap beside F1, so `12V_PROT` rather than `VBAT_FUSED` now makes the long run down the right edge. Before fabrication, In2 became a ground plane, copper was pulled back to 0.5 mm from the board edge, the DMS LED drive was widened, and every part got an MPN and LCSC code |
-| 1 | October 2026 | First layout. Reviewed in [`PCB Files/design_review_2026-10-13.md`](PCB%20Files/design_review_2026-10-13.md) |
-
-The rev 2 layout is reviewed in [`PCB Files/design_review_2026-11-08.md`](PCB%20Files/design_review_2026-11-08.md), and the pre-fabrication pass in [`PCB Files/design_review_2026-11-08_prefab.md`](PCB%20Files/design_review_2026-11-08_prefab.md).
-
-## Before you build
-
-1. Open the project in KiCad 10, refill the zones (B), and run DRC with schematic parity. It should come up with zero errors and zero unconnected items.
-2. J1's row-B pads are 0.65 mm copper on a 0.45 mm drill — a 0.10 mm annular ring. This is **identical to the Volvo/Polestar harness box**, which has been manufactured and confirmed working, so it is a proven geometry rather than a blocker. JAE's own recommended pattern (drawing SJ116123) calls for a Ø0.4 drill in the same Ø0.65 pad, which would give a 0.125 mm ring and put it inside IPC-6012 Class 2; tightening the drill to 0.40 mm is a free improvement if you want it, but it is a departure from the proven board.
-3. Every part has an MPN and an LCSC code. Q1 is the DMP4015SSS-13 (C508210), because the AEC-Q101 DMP4015SSSQ-13 (C531172) had no stock; they share a pinout, ratings and footprint. C2/C3 are Samsung CL10B104KB8NNNC (C1591), a JLCPCB Basic part. When checked on 8 Nov 2026, J5/J6 (34691-0162, C585844) had no LCSC stock.
-4. The custom libraries (`My_Components`, `Footprints`, and the two date-named ones) are not registered — there is no `fp-lib-table` or `sym-lib-table` in the project or in your KiCad config, which is what the ERC library warnings are about. Register them before editing footprints.
-5. F1 and D14 were added outside KiCad. Run Tools > Update Footprints from Library on those two to pull the exact library copies, then refill and re-run DRC. Leave J1 out of that update unless the library copy has the boss-2 slot, which only the board's own copy of J1 has.
-6. Check the Molex pin numbering and polarization against the Fisker CON1 keying before installing in a vehicle. That can't be settled from the design files alone.
-7. Copper is held 0.5 mm back from the board edge. `Ocean Harness.kicad_dru` allows 0.2 mm on the outer layers only around J1's boss slot, where JAE's pattern needs it, so keep the board-wide rule at 0.5 mm.
-8. The board gives the comma device no ignition line (SBU2 is unconnected), so the device has to take ignition from CAN. Upstream panda firmware has no Fisker entry for that yet.
-
 ## License
 
 Licensed under the [CERN Open Hardware Licence Version 2 - Strongly Reciprocal](LICENSE) (CERN-OHL-S-2.0).
