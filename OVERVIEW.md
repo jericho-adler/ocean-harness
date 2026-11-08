@@ -109,14 +109,14 @@ directly on vehicle-harness connectors.
 |---|---|
 | F.Cu | signal + GND pour |
 | In1.Cu | GND plane |
-| In2.Cu | split power plane — `12V_PROT` (priority) over `VIN` |
+| In2.Cu | GND plane, with a `12V_PROT` island (priority) under J1 and a 0.3 mm `VIN` link |
 | B.Cu | signal + GND pour |
 
-365 track segments (207 F.Cu, 158 B.Cu), 65 vias, 0.25 mm minimum track width, 0.3 mm minimum
+375 track segments (211 F.Cu, 4 In2.Cu, 160 B.Cu), 65 vias, 0.2 mm minimum track width, 0.3 mm minimum
 drill, 73 nets. 35 footprints: 30 components plus two M3 mounting holes and three fiducials.
 
-DRC: 0 errors, 0 unconnected items. 9 schematic-parity items — five `extra_footprint` for the
-mounting holes and fiducials, which have no symbol and are expected, and four `Description`/`Spec`
+DRC: 0 errors, 0 unconnected items. 8 schematic-parity items — five `extra_footprint` for the
+mounting holes and fiducials, which have no symbol and are expected, and three `Description`/`Spec`
 field strings that drift between symbol and footprint. 43 remaining warnings are all cosmetic or
 library hygiene — silkscreen clipped by the board edge, silkscreen overlap, and footprint libraries
 that are not registered on this machine.
@@ -129,7 +129,9 @@ that are not registered on this machine.
   to the Volvo/Polestar harness box, which is manufactured and in service, so it is proven rather
   than a risk. JAE's drawing specifies a Ø0.4 drill, which would give 0.125 mm.
 - **J1's boss 2 is a 1.0 × 0.775 mm milled slot**, not a round hole — JAE's round-plus-slot locating
-  scheme, which absorbs the boss-pitch tolerance. `min_copper_edge_clearance` is 0.2 mm to suit it.
+  scheme, which absorbs the boss-pitch tolerance. A rule in `Ocean Harness.kicad_dru` allows 0.2 mm
+  copper-to-edge clearance around it on the outer layers; the rest of the board keeps 0.5 mm.
+- **No ignition line.** SBU2 (J1 B8) is unconnected, so the comma device takes ignition from CAN.
 - Several datasheets embedded in the board file do not correspond to fitted parts: `DMN3200U-7`
   (the fitted FET is Q1, a DMP4015SSSQ-13), `JAE MX34032NF4`, `Molex 2125280000`, and `SMAJ36` —
   note the fitted TVS is the **SMAJ16A**, a 16 V standoff part, not the 36 V SMAJ36. Worth

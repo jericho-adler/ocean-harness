@@ -1,0 +1,7 @@
+(version 1)
+# JAE's DX07 pattern puts J1's own GND copper (pad A12, the A12-B1 stitch) ~0.21 mm from the
+# boss-2 slot. Allow that on the outer layers only; everything else keeps the 0.5 mm board rule.
+(rule "J1 boss slot"
+  (layer outer)
+  (constraint edge_clearance (min 0.2mm))
+  (condition "A.memberOfFootprint('J1') || B.memberOfFootprint('J1')"))

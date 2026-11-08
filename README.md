@@ -133,10 +133,10 @@ F1 fuses the board's tap off VBAT. Reverse polarity and transients on the supply
 | --- | --- |
 | F.Cu | Signals, GND pour |
 | In1.Cu | Solid GND plane |
-| In2.Cu | `VIN` plane, with a `12V_PROT` island under J1, C1 and D9 to D11 |
+| In2.Cu | Solid GND plane, with a `12V_PROT` island under J1, C1 and D9 to D11 and a 0.3 mm `VIN` link from R5 to K1 |
 | B.Cu | Signals, GND pour |
 
-The two header pairs face out of opposite edges, so the J5↔J6 pin order is reversed. Those 12 nets cross over in the strip between the headers. The six ultrasonic lines run on B.Cu around J4. Signal tracks are 0.25 mm with 45° bends. The VBAT passthrough leaves J3 on B.Cu at 1.6 mm (squeezed between the J3 mounting peg and the board edge), runs up the right side and across the top at 2.4 mm, and drops to F.Cu through six 0.4 mm vias for the last 2.0 mm run into J4. F1, Q1, D15 and R7 all sit in the gap between J5 and J3, in that order along the strip, and F1 is fed from that trunk through three vias. `VBAT_FUSED` is just the 6 mm hop from F1 to Q1's drain pads, so almost nothing on the board is upstream of the reverse-polarity FET. `12V_PROT` leaves Q1's source pads, drops below J3 and runs the length of the right edge on a 1.2 mm F.Cu track, across the bottom, and up through the slot where D10 used to be to reach D11, D9, C1 and R5. From C1 it continues through the In2 island, which connects solid to the VBUS pins.
+The two header pairs face out of opposite edges, so the J5↔J6 pin order is reversed. Those 12 nets cross over in the strip between the headers. The six ultrasonic lines run on B.Cu around J4. Signal tracks are 0.25 mm with 45° bends. The DMS LED drive is 0.6 mm, necked to 0.35 mm where it threads between connector pins and past two CAN vias. The VBAT passthrough leaves J3 on B.Cu at 1.6 mm (squeezed between the J3 mounting peg and the board edge), runs up the right side and across the top at 2.4 mm, and drops to F.Cu through six 0.4 mm vias for the last 2.0 mm run into J4. F1, Q1, D15 and R7 all sit in the gap between J5 and J3, in that order along the strip, and F1 is fed from that trunk through three vias. `VBAT_FUSED` is just the 6 mm hop from F1 to Q1's drain pads, so almost nothing on the board is upstream of the reverse-polarity FET. `12V_PROT` leaves Q1's source pads, drops below J3 and runs the length of the right edge on a 1.2 mm F.Cu track, across the bottom, and up through the slot where D10 used to be to reach D11, D9, C1 and R5. From C1 it continues through the In2 island, which connects solid to the VBUS pins. `VIN` gets from R5 to K1 on a 0.3 mm In2 track, because both outer layers are crossed by other traces there.
 
 ## Repository layout
 
@@ -150,19 +150,21 @@ The two header pairs face out of opposite edges, so the J5↔J6 pin order is rev
 
 | Rev | Date | Changes |
 | --- | --- | --- |
-| 2 | November 2026 | Added the DG419 supply clamp (D12, R6, D13, C3); U1/U2 V+ and VL now come from it. Added F1 on the VBAT tap, moved D1 to the `_C` pair, added D14 on `SBU 1`, widened the ECU VBAT passthrough, and put a "12V, COMMA ONLY" note on the back silkscreen under J1. Board shrunk from 115.75 × 75.25 mm to 89.0 × 72.2 mm with every part on top. M3 holes moved into the header gaps. Re-routed, silkscreen redone. Late in the revision, **D10 (SS34, later MBRA340T3G) was replaced by Q1 + R7 + D15** — a P-channel ideal-diode pass FET — which cut the reverse-polarity element's dissipation from 1.5 W to 0.1 W at the fuse limit. The group moved into the J5↔J3 gap beside F1, so `12V_PROT` rather than `VBAT_FUSED` now makes the long run down the right edge |
+| 2 | November 2026 | Added the DG419 supply clamp (D12, R6, D13, C3); U1/U2 V+ and VL now come from it. Added F1 on the VBAT tap, moved D1 to the `_C` pair, added D14 on `SBU 1`, widened the ECU VBAT passthrough, and put a "12V, COMMA ONLY" note on the back silkscreen under J1. Board shrunk from 115.75 × 75.25 mm to 89.0 × 72.2 mm with every part on top. M3 holes moved into the header gaps. Re-routed, silkscreen redone. Late in the revision, **D10 (SS34, later MBRA340T3G) was replaced by Q1 + R7 + D15** — a P-channel ideal-diode pass FET — which cut the reverse-polarity element's dissipation from 1.5 W to 0.1 W at the fuse limit. The group moved into the J5↔J3 gap beside F1, so `12V_PROT` rather than `VBAT_FUSED` now makes the long run down the right edge. Before fabrication, In2 became a ground plane, copper was pulled back to 0.5 mm from the board edge, the DMS LED drive was widened, and every part got an MPN and LCSC code |
 | 1 | October 2026 | First layout. Reviewed in [`PCB Files/design_review_2026-10-13.md`](PCB%20Files/design_review_2026-10-13.md) |
 
-The rev 2 layout is reviewed in [`PCB Files/design_review_2026-11-08.md`](PCB%20Files/design_review_2026-11-08.md).
+The rev 2 layout is reviewed in [`PCB Files/design_review_2026-11-08.md`](PCB%20Files/design_review_2026-11-08.md), and the pre-fabrication pass in [`PCB Files/design_review_2026-11-08_prefab.md`](PCB%20Files/design_review_2026-11-08_prefab.md).
 
 ## Before you build
 
 1. Open the project in KiCad 10, refill the zones (B), and run DRC with schematic parity. It should come up with zero errors and zero unconnected items.
 2. J1's row-B pads are 0.65 mm copper on a 0.45 mm drill — a 0.10 mm annular ring. This is **identical to the Volvo/Polestar harness box**, which has been manufactured and confirmed working, so it is a proven geometry rather than a blocker. JAE's own recommended pattern (drawing SJ116123) calls for a Ø0.4 drill in the same Ø0.65 pad, which would give a 0.125 mm ring and put it inside IPC-6012 Class 2; tightening the drill to 0.40 mm is a free improvement if you want it, but it is a departure from the proven board.
-3. R6, R7, Q1 and D15 have no JLCPCB part number, and R7 and D15 have no MPN at all. Fill those in before making a BOM.
+3. Every part has an MPN and an LCSC code. When checked on 8 Nov 2026, Q1 (DMP4015SSSQ-13, C531172) and J5/J6 (34691-0162, C585844) had no LCSC stock. Q1's non-automotive twin, DMP4015SSS-13 (C508210), was in stock.
 4. The custom libraries (`My_Components`, `Footprints`, and the two date-named ones) are not registered — there is no `fp-lib-table` or `sym-lib-table` in the project or in your KiCad config, which is what the ERC library warnings are about. Register them before editing footprints.
-5. F1 and D14 were added outside KiCad. Run Tools > Update Footprints from Library on those two to pull the exact library copies, then refill and re-run DRC.
+5. F1 and D14 were added outside KiCad. Run Tools > Update Footprints from Library on those two to pull the exact library copies, then refill and re-run DRC. Leave J1 out of that update unless the library copy has the boss-2 slot, which only the board's own copy of J1 has.
 6. Check the Molex pin numbering and polarization against the Fisker CON1 keying before installing in a vehicle. That can't be settled from the design files alone.
+7. Copper is held 0.5 mm back from the board edge. `Ocean Harness.kicad_dru` allows 0.2 mm on the outer layers only around J1's boss slot, where JAE's pattern needs it, so keep the board-wide rule at 0.5 mm.
+8. The board gives the comma device no ignition line (SBU2 is unconnected), so the device has to take ignition from CAN. Upstream panda firmware has no Fisker entry for that yet.
 
 ## License
 

@@ -44472,7 +44472,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "kicad-embed://Rohm ESR series resistors.pdf"
 			(at 303.53 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -44483,7 +44483,7 @@
 				)
 			)
 		)
-		(property "Description" "Series element of the shunt regulator feeding U1/U2 V+. 3.3K rather than 1K keeps the standby drain to about 0.6mA at 14.4V while still biasing D16 at 0.6-4mA across the whole input range."
+		(property "Description" "Series element of the shunt regulator feeding U1/U2 V+ and VL. 3.3K keeps the standby drain to about 0.6mA at 14.4V while still biasing D13."
 			(at 303.53 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -44494,7 +44494,7 @@
 				)
 			)
 		)
-		(property "MPN" "ESR03EZPJ332"
+		(property "MPN" "ESR03EZPF3301"
 			(at 303.53 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -44505,7 +44505,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" ""
+		(property "JLCPCB Part #" "C510091"
 			(at 303.53 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -44527,7 +44527,7 @@
 				)
 			)
 		)
-		(property "Spec" "Resistor, 3.3k 5%, anti-surge ESR03 0603 -- SW_VCC shunt-regulator series element"
+		(property "Spec" "Resistor, 3.3k 1%, anti-surge ESR03 0603 -- SW_VCC shunt-regulator series element"
 			(at 303.53 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -46086,6 +46086,13 @@
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
+		(property "JLCPCB Part #" "C531172"
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
 		(pin "1"
 			(uuid "e41a38b0-3361-4b1d-badf-48187c94b7e4")
 		)
@@ -46149,7 +46156,7 @@
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "kicad-embed://Rohm ESR series resistors.pdf"
 			(at 226.3007 175.514 0)
 			(hide yes)
 			(show_name no)
@@ -46164,6 +46171,27 @@
 			(effects (font (size 1.27 1.27)))
 		)
 		(property "Spec" "Resistor, 100k 5%, anti-surge, 0603 (ROHM ESR03)"
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "MPN" "ESR03EZPJ104"
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "JLCPCB Part #" "C253331"
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Manufacturer" "ROHM"
 			(at 226.3007 175.514 0)
 			(hide yes)
 			(show_name no)
@@ -46230,6 +46258,27 @@
 			(effects (font (size 1.27 1.27)))
 		)
 		(property "Spec" "Zener diode, 16V 500mW, SOD-123"
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "MPN" "BZT52C16-7-F"
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "JLCPCB Part #" "C397929"
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Manufacturer" "Diodes Incorporated"
 			(at 217.4107 171.704 0)
 			(hide yes)
 			(show_name no)
