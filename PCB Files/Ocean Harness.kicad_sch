@@ -37471,6 +37471,415 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "My_Components:DMP4015SSS-13"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "DMP4015SSS-13"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP4015SSS.pdf"
+				(at 5.08 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "Diodes Inc DMP4015SSS-13 P-channel MOSFET, SO-8. -40V VDSS, +-25V VGSS, -10.1A ID, RDS(on) 11 mOhm at VGS -10V / 15 mOhm at -4.5V. PAD MAP: 1-3 Source, 4 Gate, 5-8 Drain - do NOT use a 3-pin generic FET symbol with this footprint, the nets land on the source pads."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "P-Channel MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "DMP4015SSS-13_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "DMP4015SSS-13_1_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 97.79 41.91)
@@ -41051,127 +41460,6 @@
 			(project "Ocean Harness"
 				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
 					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:SS34")
-		(at 217.4107 164.084 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "79d15a8a-aea1-4aa0-b6dd-fd7f0d031871")
-		(property "Reference" "D10"
-			(at 217.4107 159.004 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MBRA340T3G"
-			(at 217.4107 169.164 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 217.4107 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/mbra340t3-d.pdf"
-			(at 217.4107 164.084 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 217.4107 164.084 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "MBRA340T3G"
-			(at 217.4107 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Part #" "C26178"
-			(at 217.4107 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "onsemi"
-			(at 217.4107 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Spec" "Schottky rectifier 40V 3A, VF 450mV max @3A/25C, 390mV max @3A/100C. MUST be DO-214AC (SMA)."
-			(at 217.4107 164.084 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dfae8a61-b329-4d85-aa74-d38e9fbddb47")
-		)
-		(pin "2"
-			(uuid "3817d1d8-84a7-4207-97f6-ac69810c9225")
-		)
-		(instances
-			(project "Ocean Harness"
-				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
-					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -45689,6 +45977,345 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b9f5c0b8-b43a-4a86-a983-f067f0b578f0")
+	)
+	(wire
+		(pts
+			(xy 221.2207 164.084) (xy 223.7607 164.084)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46060e74-e407-4924-b907-fcdd022da8fc")
+	)
+	(wire
+		(pts
+			(xy 218.6807 171.704) (xy 226.3007 171.704)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caba86ed-e33d-4f4f-ad36-a79b7f0a793f")
+	)
+	(wire
+		(pts
+			(xy 213.6007 171.704) (xy 213.6007 164.084)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c3a1786-83eb-4fd2-ae81-ecfc90d132db")
+	)
+	(junction
+		(at 213.6007 164.084)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "590aa78e-266c-47c6-9f60-f8569dfe4921")
+	)
+	(junction
+		(at 221.2207 171.704)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78eee4a5-7165-4d7a-a1c1-9be9b7ffd463")
+	)
+	(symbol
+		(lib_id "My_Components:DMP4015SSS-13")
+		(at 218.6807 166.624 90)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f4fda5d-c576-4555-b374-fb286be44879")
+		(property "Reference" "Q1"
+			(at 218.6807 161.624 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "DMP4015SSSQ-13"
+			(at 218.6807 171.624 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP4015SSSQ.pdf"
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "P-channel reverse-polarity pass FET, AEC-Q101. Drain (pads 5-8) on VBAT_FUSED, source (pads 1-3) on 12V_PROT, so the body diode conducts battery-to-load and the channel then shorts it out. Replaces the D10 Schottky: 11 mOhm max at Vgs -10V is 0.10W at the 3A fuse limit against 1.17W for the diode, and recovers about 0.4V of headroom to the comma device."
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "MPN" "DMP4015SSSQ-13"
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Spec" "P-channel MOSFET, -40V, -10.1A, RDS(on) 11 mOhm max @ Vgs=-10V, Vgss +-25V, SO-8, AEC-Q101"
+			(at 218.6807 166.624 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "e41a38b0-3361-4b1d-badf-48187c94b7e4")
+		)
+		(pin "2"
+			(uuid "7c1e910d-bb9d-4dd6-8da6-cc54640c934e")
+		)
+		(pin "3"
+			(uuid "c5f8cec1-756b-4508-b063-693eba8fab6e")
+		)
+		(pin "4"
+			(uuid "ff04f9d0-0a80-4d64-8915-517dc1ac1251")
+		)
+		(pin "5"
+			(uuid "6dee3163-1b58-4e9e-8381-bbf6c75753a1")
+		)
+		(pin "6"
+			(uuid "19e98e50-e8da-42c8-a332-95368ec70705")
+		)
+		(pin "7"
+			(uuid "7c3b8658-2cfb-4aee-b23b-193a8fe4934e")
+		)
+		(pin "8"
+			(uuid "0a8da93d-7111-47bb-881b-cba201fd8bc0")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 226.3007 175.514 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b8d61a9e-5680-48d3-b313-d43c0fdb3633")
+		(property "Reference" "R7"
+			(at 226.3007 170.514 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "100K"
+			(at 226.3007 180.514 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Footprints:Rohm ESR03EZPJ104"
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Gate pulldown for Q1. Carries no current in normal operation - the gate is a MOSFET gate and D15 is off below 16V - so it costs nothing in standby. It only conducts when D15 clamps."
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Spec" "Resistor, 100k 5%, anti-surge, 0603 (ROHM ESR03)"
+			(at 226.3007 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "5533261d-7444-41bb-a7b1-35ce3fee289c")
+		)
+		(pin "2"
+			(uuid "846ac32a-bdf4-4556-96dd-42e201c25735")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 217.4107 171.704 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d937f6d8-f2cd-47ea-95d4-02f10369d73a")
+		(property "Reference" "D15"
+			(at 217.4107 166.704 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "BZT52C16"
+			(at 217.4107 176.704 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Footprints:SOD123_DIO"
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "16V zener clamping Q1 Vgs. Without it Vgs equals the battery voltage and would exceed the -25V rating when D9/D11 clamp a transient at about 26V. 16V is chosen so the zener stays off at a 14.4V charging rail."
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Spec" "Zener diode, 16V 500mW, SOD-123"
+			(at 217.4107 171.704 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "5aa5b0f3-3b2b-4d21-88c5-ada876520a79")
+		)
+		(pin "2"
+			(uuid "2da0ab56-e292-46b9-9595-170cf43d289c")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 226.3007 179.324 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cc8d9eeb-541f-4b2b-afed-4aad3a03758e")
+		(property "Reference" "#PWR050"
+			(at 226.3007 174.324 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "GND"
+			(at 226.3007 184.324 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 226.3007 179.324 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 226.3007 179.324 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 226.3007 179.324 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "8c1e43e1-a897-496e-b29c-02f7454a7607")
+		)
+		(instances
+			(project "Ocean Harness"
+				(path "/9bff95d7-5e0b-4644-a7b2-cd392dfbdb8f"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "Q1_GATE"
+		(at 222.5007 171.704 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3b65919-d4f0-4b51-bff9-e659542006de")
 	)
 	(sheet_instances
 		(path "/"

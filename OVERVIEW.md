@@ -24,15 +24,23 @@ differential pairs, comma "OBD-C" style. The CC, D+/D- and SBU2 pins are unused.
 
 Self-powered from harness VBAT on J3 pin 1 — no external supply.
 
-- **D10** (SS34 Schottky) gives series reverse-polarity protection into the `12V_PROT` rail.
+- **F1** (Bel 0685T3000-01, 3 A time-lag) fuses the board's own tap, leaving the ECU passthrough
+  unfused.
+- **Q1** (Diodes DMP4015SSSQ-13, AEC-Q101 P-channel MOSFET) gives series reverse-polarity
+  protection into the `12V_PROT` rail. Drain on the input, source on the output, so the body diode
+  conducts battery-to-load and the channel shorts it out; under reversed polarity both block.
+  **R7** (100 kΩ) is the gate pulldown and **D15** (BZT52C16) clamps V<sub>GS</sub> to 16 V against
+  the ±25 V rating. At 11 mΩ it dissipates 0.1 W at the 3 A fuse limit, where the SS34 Schottky it
+  replaced would have dissipated 1.5 W.
 - **D9** and **D11** (two SMAJ16A) clamp automotive transients on that rail.
 - `12V_PROT` feeds the comma device over all four VBUS pins (A4 / A9 / B4 / B9).
 - **R5** (160 Ω) drops `12V_PROT` to the `VIN` rail, which runs the relay coil. At a normal ~14 V
   charging-system rail, R5 against the 960 Ω coil holds it near its 12 V rating. **CR1** (1N4148W)
   is the coil flyback diode and **C2** decouples.
 
-VBAT also passes straight through J3.1 → J4.1 on 1 mm copper, so the ECU keeps its own supply
-regardless of what the board is doing.
+VBAT also passes straight through J3.1 → J4.1 — 1.6 mm leaving J3, 2.4 mm along B.Cu, 2.0 mm into
+J4, with six 0.4 mm vias at the layer change — so the ECU keeps its own supply regardless of what
+the board is doing. That path is unfused and sits upstream of F1.
 
 ### Switch supply
 
@@ -88,8 +96,12 @@ monitor it.
 
 ## Protection
 
-Four **PESD1CAN** ESD arrays, one each on the vehicle-side ADAS CAN, the ECU-side ADAS CAN, the MRR
-tap, and the `COMMA_P` / `COMMA_N` pair.
+Four **PESD1CAN** ESD arrays, one each on the vehicle-side ADAS CAN (D3), the ECU-side ADAS CAN
+(D2), the MRR tap (D8), and the comma-side `_C` pair next to J1 (D1). **D14** (PESD24VS1UB) covers
+`SBU 1`.
+
+The four corner-radar CAN FD pairs and the DMS LED pair have no ESD protection, despite landing
+directly on vehicle-harness connectors.
 
 ## Board construction
 
@@ -100,17 +112,22 @@ tap, and the `COMMA_P` / `COMMA_N` pair.
 | In2.Cu | split power plane — `12V_PROT` (priority) over `VIN` |
 | B.Cu | signal + GND pour |
 
-353 track segments, 57 vias, 0.25 mm minimum track width, 0.3 mm minimum drill, 71 nets.
-31 footprints: 26 components plus two M3 mounting holes and three fiducials.
+365 track segments (207 F.Cu, 158 B.Cu), 65 vias, 0.25 mm minimum track width, 0.3 mm minimum
+drill, 73 nets. 35 footprints: 30 components plus two M3 mounting holes and three fiducials.
 
-DRC: 0 errors, 0 unconnected items, 0 schematic-parity issues. 32 remaining warnings are all
-cosmetic or library hygiene — silkscreen clipped by the board edge, silkscreen overlap, and
-footprint-library mismatches.
+DRC: 0 errors, 0 unconnected items. 9 schematic-parity items — five `extra_footprint` for the
+mounting holes and fiducials, which have no symbol and are expected, and four `Description`/`Spec`
+field strings that drift between symbol and footprint. 43 remaining warnings are all cosmetic or
+library hygiene — silkscreen clipped by the board edge, silkscreen overlap, and footprint libraries
+that are not registered on this machine.
 
 ## Notes
 
-- **`COMMA_P` / `COMMA_N`** (J1 B10/B11) connect only to the connector and their TVS diode — they
-  go nowhere else on the board. Reserved, or a leftover.
-- The `DMN3200U-7.pdf` in the board file's `embedded_files` block is an orphaned datasheet
-  attachment; there is no MOSFET on this board. Several other embedded datasheets (`JAE
-  MX34032NF4`, `Molex 2125280000`, `SMAJ36`) likewise do not correspond to fitted parts.
+- **J1 B10/B11** connect only to the connector and go nowhere else on the board. The `COMMA_P` /
+  `COMMA_N` labels that used to name them have been removed; the pins are reserved.
+- **J1's row B is through-hole** at 0.65 mm pad on 0.45 mm drill — a 0.10 mm annular ring, below
+  most fabs' standard process. Those pins carry the ECU-side CAN pair and half the 12 V feed.
+- Several datasheets embedded in the board file do not correspond to fitted parts: `DMN3200U-7`
+  (the fitted FET is Q1, a DMP4015SSSQ-13), `JAE MX34032NF4`, `Molex 2125280000`, and `SMAJ36` —
+  note the fitted TVS is the **SMAJ16A**, a 16 V standoff part, not the 36 V SMAJ36. Worth
+  clearing out; they also add about 3 MB to the file.
