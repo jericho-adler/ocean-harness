@@ -3,7 +3,13 @@
 Reviewed: `Ocean Harness.kicad_sch` / `.kicad_pcb` / `.kicad_pro` **as they sit in the working tree**, which for the
 schematic is *not* what is committed. KiCad was not open (no lock files), so this covers everything on disk.
 
-**Verdict: one blocker left — J1's annular ring. Everything else is clear.**
+**Verdict: no blockers. DRC is clean and the J1 concern is resolved.**
+
+> **Update, 8 Nov (second pass).** J1 was compared against the Volvo/Polestar harness box, which has been
+> manufactured and confirmed working, and against JAE's own drawing SJ116123 (extracted from this board's
+> `embedded_files`). The annular ring turns out to be **identical** between the two boards, so finding 2 below is
+> withdrawn as a blocker. The comparison did surface a real defect — a missing boss slot — which has been fixed.
+> See "J1 vs the Polestar harness box" below.
 
 The reverse-polarity rework in the schematic is correct and datasheet-verified, and it fixes the one real
 electrical problem the 2 Nov review raised. When this review was first written the board file had not been
@@ -80,7 +86,7 @@ in KiCad.
 | # | Severity | Finding | Basis |
 |---|---|---|---|
 | 1 | ~~Blocker~~ **Resolved** | Schematic and PCB described different circuits — the board still had D10 and none of Q1/R7/D15. Reworked on 8 Nov; see "Rework applied" above | DRC schematic-parity, raw-file verified |
-| 2 | **Blocker** | J1's row-B through-hole pads are 0.65 mm copper on a 0.45 mm drill → **0.10 mm annular ring**, on pads carrying the ECU-side CAN pair and half the 12 V feed. Unfixed from the 2 Nov review | Raw-file verified |
+| 2 | ~~Blocker~~ **Withdrawn** | J1's 0.10 mm annular ring is identical to the manufactured Polestar harness box, so it is proven. The comparison did find a missing boss slot, now fixed | Raw-file + datasheet verified |
 | 3 | Medium | Q1, R7 and D15 have no LCSC/JLCPCB part number; R7 and D15 have no MPN at all. R6's JLCPCB field is still empty | Raw-file verified |
 | 4 | Medium | The custom symbol and footprint libraries are not registered — there is no `fp-lib-table` or `sym-lib-table` in the project or in `~/.config/kicad/10.0/` | Verified on this machine |
 | 5 | Medium | Bottom-layer signals reference a **split power plane** (In2.Cu carries VIN and a 12V_PROT island), not ground. 158 of 357 segments are on B.Cu | Analyzer-derived |
@@ -122,7 +128,53 @@ Pick one before you order:
 Do not fabricate the working tree as it stands. The Gerbers would come from the board file, so you would get the
 D10 circuit while your BOM, schematic and documentation describe the Q1 circuit.
 
-### 2 — J1 annular ring
+## J1 vs the Polestar harness box
+
+Compared `My_Components:JAE DX07S024XJ1R1100` (Fisker) against `Footprints:JAE DX07S024XJ1R1100` (Volvo/Polestar,
+manufactured and confirmed working), and both against JAE drawing **SJ116123** (2015/06/18), extracted from the
+`embedded_files` block of this board.
+
+| | Fisker (before) | Polestar | JAE SJ116123 |
+|---|---|---|---|
+| Row A pads | 0.3 × 1.1 mm SMD | identical | 12-0.3 ±0.03 × 1.1 ±0.03 ✓ |
+| Row B pad | Ø0.65 | identical | Ø0.65 ±0.05 ✓ |
+| Row B drill | Ø0.45 → **ring 0.10** | **identical** | Ø0.4 ±0.05 → ring 0.125 |
+| Shell legs | 4 oval, all numbered `S1`, all on GND | `S1` on GND, `S2`/`S3`/`S4` **no net** | 4 oval holes |
+| Boss 1 (local 0,0) | Ø0.775 NPTH | Ø0.775 NPTH | Ø0.75 ±0.025 round ✓ |
+| **Boss 2 (local 7.2,0)** | **Ø0.775 round NPTH** | NPTH **+ 1.0 × 0.775 Edge.Cuts slot** | **0.95 ±0.05 × 0.75 ±0.025 SLOT** |
+| `min_copper_edge_clearance` | 0.5 mm | 0.2 mm | — |
+| `min_hole_clearance` | 0.25 mm | 0.2 mm | — |
+
+**The annular ring is the same on both boards.** 0.65 mm pad on a 0.45 mm drill, 0.10 mm ring, on the Polestar
+too — and that board is in service. Finding 2 is therefore withdrawn as a blocker. It remains true that JAE
+specifies a **Ø0.4 drill**, which would give a 0.125 mm ring and sit inside IPC-6012 Class 2; both projects
+opened the hole to 0.45. Tightening to 0.40 is available as a free improvement but departs from the proven
+board, so it is left as the designer's call.
+
+**The real difference was boss 2.** JAE's pattern uses one round locating hole and one *slot*, the classic
+round-plus-slot scheme that absorbs the ±0.05 mm boss-pitch tolerance. The Polestar cuts that slot on
+Edge.Cuts; the Fisker had a plain round Ø0.775 hole in both positions, which can bind on assembly. **Fixed:** the
+six Edge.Cuts items were added to the Fisker footprint, giving a 1.000 × 0.775 mm slot centred on local (7.2, 0)
+— the same geometry the Polestar ships, and inside the drawing's 0.90–1.00 × 0.725–0.775 window.
+
+Two consequences, both handled:
+
+- `min_copper_edge_clearance` was **0.5 mm**, and JAE's pattern necessarily puts J1's own GND copper close to
+  that slot (tightest is pad A12 at 0.210 mm). Relaxed to **0.2 mm to match the Polestar**, which is the rule
+  set the working board was built to. Nothing else on the board was within 0.5 mm of an edge, so this only
+  affects the new slot.
+- The A12→B1 GND stitch passed the slot at 0.199 mm. Narrowed from 0.25 to 0.20 mm, giving 0.224 mm —
+  comparable to B1's own pad at 0.234 mm, which is as close as JAE's pattern allows anyone to get.
+
+**Not matched, deliberately:** the Polestar leaves shell legs S2/S3/S4 unconnected, because its schematic symbol
+has only one shell pin. The Fisker names all four pads `S1`, so all four bond to GND — better for ESD and shield
+return, and no manufacturing difference. Keeping the Fisker's version. `min_hole_clearance` was also left at the
+stricter 0.25 mm, since the board passes at that value and relaxing it would buy nothing.
+
+After the change: **0 DRC errors, 0 unconnected items, 9 parity items** (the same baseline as before), 43
+warnings.
+
+### 2 — J1 annular ring *(withdrawn — see "J1 vs the Polestar harness box" above)*
 
 J1 (JAE DX07S024XJ1R1100) is a hybrid USB-C: row A is SMD (0.3 × 1.1 mm pads), row B is through-hole.
 
@@ -394,7 +446,7 @@ if you can. Full-intercept mode (`SBU 1` high) takes the switches out of the pat
   `12V_PROT`, `SW_VCC`, `SBU 1` and the ADAS CAN pairs would make bring-up much easier.
 - **DC-001** — C2 moderately far from U2. **BE-001** — `SW_VCC` routed near the board edge.
 - **IO-002 ×4** — J3–J6 have few or no ground pins. Dictated by the Fisker CON1 pinout, not a choice you can make.
-- **DFM-001/002** — the board is on JLCPCB's *advanced* tier solely because of the 0.10 mm annular ring.
+- **DFM-001/002** — the board is on JLCPCB's *advanced* tier solely because of the 0.10 mm annular ring, which the Polestar board has shipped with.
 - **Relay continuously energised** — Omron's G5V-2 datasheet (p.4, "Long-term Continuously ON Contacts") warns
   that coil self-heating can film the contacts. The design is fail-safe (de-energised = stock passthrough), so the
   consequence is degraded intercept rather than a dead car, but exercising the relay periodically in firmware
@@ -448,9 +500,8 @@ has an MPN but still no LCSC code — and items 3 and 4 remain open.
 
 1. ~~Decide which circuit you are building~~ — **done.** The Q1/R7/D15 rework is on the board, D10 is gone, DRC
    is at zero errors and parity matches the committed baseline.
-2. **Fix J1's annular ring** to 0.15 mm or better, or get written confirmation your fab will run 0.10 mm. Expect
-   the J1 hole-clearance errors to return when you enlarge the pads — add a local clearance rule or keepout.
-   *This is the one remaining blocker.*
+2. ~~Fix J1's annular ring~~ — **withdrawn.** It matches the manufactured Polestar board. Optionally tighten the
+   row-B drill from 0.45 to 0.40 mm to hit JAE's recommended 0.125 mm ring and IPC-6012 Class 2.
 3. Add MPNs and LCSC numbers for Q1, R7, D15; fill R6's JLCPCB field.
 4. Register the custom symbol and footprint libraries, then run Tools > Update Footprints from Library on F1,
    D14, D15 and R7 and re-run DRC.

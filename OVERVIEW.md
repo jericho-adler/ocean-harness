@@ -125,8 +125,11 @@ that are not registered on this machine.
 
 - **J1 B10/B11** connect only to the connector and go nowhere else on the board. The `COMMA_P` /
   `COMMA_N` labels that used to name them have been removed; the pins are reserved.
-- **J1's row B is through-hole** at 0.65 mm pad on 0.45 mm drill — a 0.10 mm annular ring, below
-  most fabs' standard process. Those pins carry the ECU-side CAN pair and half the 12 V feed.
+- **J1's row B is through-hole** at 0.65 mm pad on 0.45 mm drill — a 0.10 mm annular ring. Identical
+  to the Volvo/Polestar harness box, which is manufactured and in service, so it is proven rather
+  than a risk. JAE's drawing specifies a Ø0.4 drill, which would give 0.125 mm.
+- **J1's boss 2 is a 1.0 × 0.775 mm milled slot**, not a round hole — JAE's round-plus-slot locating
+  scheme, which absorbs the boss-pitch tolerance. `min_copper_edge_clearance` is 0.2 mm to suit it.
 - Several datasheets embedded in the board file do not correspond to fitted parts: `DMN3200U-7`
   (the fitted FET is Q1, a DMP4015SSSQ-13), `JAE MX34032NF4`, `Molex 2125280000`, and `SMAJ36` —
   note the fitted TVS is the **SMAJ16A**, a 16 V standoff part, not the 36 V SMAJ36. Worth
