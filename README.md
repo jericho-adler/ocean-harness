@@ -146,6 +146,10 @@ The two header pairs face out of opposite edges, so the J5↔J6 pin order is rev
 | `images/` | Iso render |
 | `3D models/` | STEP model. Still shows the rev 1 layout |
 
+## Support
+
+If you'd like to support the project and are planning to order a comma device, using my referral link would be appreciated: [refer.comma.ai/LJ2W8GG](https://refer.comma.ai/LJ2W8GG)
+
 ## License
 
 Licensed under the [CERN Open Hardware Licence Version 2 - Strongly Reciprocal](LICENSE) (CERN-OHL-S-2.0).
