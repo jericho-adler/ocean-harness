@@ -23,3 +23,6 @@ PCB Files/Backup/
 
 # Local working images from tool sessions
 Claude outputs/
+
+# Intermediate HTML for BENCH_TEST.pdf
+build/
